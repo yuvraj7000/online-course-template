@@ -9,6 +9,7 @@ import productRoute from "./routes/productRoute.js"
 import stripeRoute from "./routes/stripeRoute.js"
 import subscriberRoute from "./routes/subscriberRoute.js"
 import { authRouter } from "./controllers/authController.js";
+import emailRouter from "./routes/emailRouter.js"
 
 
 config();
@@ -21,7 +22,6 @@ app.use(cors());
 
 app.listen(process.env.PORT, () => console.log(`Server running on ${process.env.PORT} PORT`));
 
-console.log(process.env.mongoDb)
 mongoose
     .connect(process.env.mongoDb)
     .then(() => console.log('Database is connected'))
@@ -30,6 +30,7 @@ mongoose
 app.use(express.json());
 
 app.use('/product', productRoute);
+app.use('/email', emailRouter);
 
 cloudinary.config({
     cloud_name: process.env.CLOUDINARY_CLOUD_NAME,

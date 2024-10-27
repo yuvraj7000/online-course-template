@@ -10,7 +10,9 @@ ReactDOM.createRoot(document.getElementById('root')).render(
   <BrowserRouter>
      <SnackbarProvider>
      <CartProvider>
+
       <App />
+
      </CartProvider>
      </SnackbarProvider>
   </BrowserRouter>

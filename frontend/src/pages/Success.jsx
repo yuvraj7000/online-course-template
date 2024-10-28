@@ -37,7 +37,7 @@ const Success = () => {
             <div className="text-center p-10 rounded-lg shadow-lg bg-base-200">
                 <h1 className="text-4xl font-bold mb-4">Payment Successful!</h1>
                 <p className="text-lg">Your order has been placed successfully.</p>
-                <p className="text-lg">check details on provided email {`${storedEmail}`}</p>
+                <p className="text-lg">check details on provided email {`${email}`}</p>
             </div>
         </div>
     );

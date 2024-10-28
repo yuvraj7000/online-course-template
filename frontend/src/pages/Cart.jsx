@@ -74,9 +74,10 @@ const Cart = () => {
                     </div>
                 ))}
             </div>
-
-            <div className='text-center mt-8'>
+            <div className='flex justify-center items-center'>
+            <div className='text-center mt-8 flex flex-col w-fit justify-center items-center'>
                 <p className='text-2xl font-semibold mb-4'>Total Price: ${(totalPrice / 100).toFixed(2)}</p>
+             <p className='m-1'>purchase details will be sent on provided email</p>
                 <input
                     type='email'
                     placeholder='Enter your email'
@@ -85,15 +86,16 @@ const Cart = () => {
                     className='input input-bordered h-10 mr-2'
                 />
                 {!isValidEmail && (
-                    <p className='text-red-500 mb-4'>Email must end with @gmail.com</p>
+                    <p className='text-red-500 mb-1'>Email must end with @gmail.com</p>
                 )}
                 <button
                     onClick={handleCheckout}
-                    className='btn btn-accent'
+                    className='btn btn-accent mt-2'
                     disabled={!email || !isValidEmail}
                 >
                     Proceed to Checkout
                 </button>
+            </div>
             </div>
         </div>
     );

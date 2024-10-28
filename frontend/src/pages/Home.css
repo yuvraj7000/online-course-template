@@ -1,0 +1,84 @@
+.container {
+    
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.button-div {
+    width: 100px;
+    height: 100px;
+    background-color: rgb(22, 133, 76);
+    -webkit-animation: squareToCircle 2s 1s infinite alternate;
+    animation: squareToCircle 2s 1s infinite alternate;
+    
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.container a {
+    position: absolute;
+    z-index: 2;
+    margin: auto;
+    pointer-events: auto; /* Ensure the link is clickable */
+}
+
+@-webkit-keyframes squareToCircle {
+    0% {
+        border-radius: 0 0 0 0;
+        background: rgb(6, 122, 35);
+        transform: rotate(0deg);
+    }
+    25% {
+        border-radius: 50% 0 0 0;
+        background: rgb(27, 220, 40);
+        transform: rotate(45deg);
+    }
+    50% {
+        border-radius: 50% 50% 0 0;
+        background: rgb(76, 181, 112);
+        transform: rotate(90deg);
+    }
+    75% {
+        border-radius: 50% 50% 50% 0;
+        background: rgb(133, 238, 100);
+        transform: rotate(135deg);
+    }
+    100% {
+        border-radius: 50% 50% 50% 50%;
+        background: rgb(60, 226, 165);
+        transform: rotate(180deg);
+    }
+}
+
+@keyframes squareToCircle {
+    0% {
+        border-radius: 0 0 0 0;
+        background: rgb(6, 122, 35);
+        transform: rotate(0deg);
+    }
+    25% {
+        border-radius: 50% 0 0 0;
+        background: rgb(27, 220, 40);
+        transform: rotate(45deg);
+    }
+    50% {
+        border-radius: 50% 50% 0 0;
+        background: rgb(76, 181, 112);
+        transform: rotate(90deg);
+    }
+    75% {
+        border-radius: 50% 50% 50% 0;
+        background: rgb(133, 238, 100);
+        transform: rotate(135deg);
+    }
+    100% {
+        border-radius: 50% 50% 50% 50%;
+        background: rgb(60, 226, 165);
+        transform: rotate(180deg);
+    }
+}

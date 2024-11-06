@@ -88,7 +88,7 @@ const handleSaveProduct = async () => {
         if (!uploadedImageUrl) {
             throw new Error('Image upload failed');
         }
-
+        
         const formData = {
             name,
             priceInCents,
@@ -113,7 +113,7 @@ const handleSaveProduct = async () => {
   return (
     <div className='p-6 bg-base-100 flex justify-center items-center'>
     {loading && <Spinner/>}
-    <div className='container max-w-lg shadow-lg rounded-lg p-5 bg-base-100'>
+    <div className='flex flex-col max-w-lg shadow-lg rounded-lg p-5 bg-base-100'>
         <Link to="/admin" className='flex justify-center items-center
         btn mb-4 w-12 py-2 px-4 text-sm rounded-xl'>Back</Link>
         <h1 className='text-3xl font-semibold my-4'>Create Product</h1>

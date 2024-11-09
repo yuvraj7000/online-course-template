@@ -19,7 +19,7 @@ app.listen(process.env.PORT, () => console.log(`Server running on ${process.env.
 console.log("mongo db ----- --- ",process.env.MONGODB)
 console.log("cd name ----- --- ",process.env.CLOUDINARY_CLOUD_NAME)
 mongoose
-    .connect(process.env.mongoDb)
+    .connect(process.env.MONGODB)
     .then(() => console.log('Database is connected'))
     .catch((error) => console.log(error));
 

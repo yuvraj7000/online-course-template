@@ -16,7 +16,8 @@ const app = express();
 app.use(cors());
 
 app.listen(process.env.PORT, () => console.log(`Server running on ${process.env.PORT} PORT`));
-console.log("mongo db ----- --- ",process.env.mongoDb)
+console.log("mongo db ----- --- ",process.env.MONGODB)
+console.log("cd name ----- --- ",process.env.CLOUDINARY_CLOUD_NAME)
 mongoose
     .connect(process.env.mongoDb)
     .then(() => console.log('Database is connected'))

@@ -1,5 +1,5 @@
 import express from "express"
-import { config } from "dotenv"
+import 'dotenv/config'
 import mongoose from "mongoose"
 import cors from "cors"
 import { v2 as cloudinary } from "cloudinary"
@@ -10,9 +10,6 @@ import stripeRoute from "./routes/stripeRoute.js"
 import subscriberRoute from "./routes/subscriberRoute.js"
 import { authRouter } from "./controllers/authController.js";
 import emailRouter from "./routes/emailRouter.js"
-
-
-config();
 
 const app = express();
 

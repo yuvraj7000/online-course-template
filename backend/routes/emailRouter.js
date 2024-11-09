@@ -53,8 +53,8 @@ router.post('/', async (req, res) => {
         const mailOptions = {
             from: '14rajuyadav2004@gmail.com',
             to: email,
-            subject: 'Hello from Backend',
-            text: 'Hello, this is a test message from the backend!'
+            subject: 'CodeDeck Purchase',
+            text: 'your purchase was successful',
         };
 
         // Send email

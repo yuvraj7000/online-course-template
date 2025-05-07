@@ -24,7 +24,7 @@ const Footer = () => {
 <footer className="footer p-10 bg-base-200 text-base-content">
   <aside>
     <h2 className='text-3xl'>CodeDeck</h2>
-    <p>Providing reliable tech since 2024</p>
+    <p>&copy; {new Date().getFullYear()} <span className='text-teal-700'>CodeDeck</span>. All rights reserved.</p>
     <a href="/login" className='underline' target="_blank" rel="noopener noreferrer">add shop item</a>
   </aside> 
   <nav>
